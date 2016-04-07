@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Banking Form</title>
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+	<!-- /header -->
+	<header>
+		<h1>Banking Form</h1>
+	</header>
+	<fieldset>
+      <legend>Applicant Information</legend>
+        <label for="name">Name:</label>
+          <input type="text" id="name" name="user_first_name" placeholder="First Name"></input>
+          <input type="text" id="name" name="user_middle_name" placeholder="Middle Name, if Applicable"></input>
+          <input type="text" id="name" name="user_last_name" placeholder="First Name"></input>
+        <label for="address">Address:</label>
+          <input type="text" id="address" name="address_line_1" placeholder="Address line 1"></input>
+          <input type="text" id="address" name="address_line_2" placeholder="Address line 2"></input>
+          <input type="text" id="city" name="city" placeholder="City"></input>
+        <label for="states">State:</label>
+          <input list="states" name="us_states"></input>
+          <datalist id="states" name="us_states">
+            <option>AL</option>
+            <option>AK</option>
+            <option>AR</option>
+            <option>AZ</option>
+          </datalist>
+        <input type="text" id="zip" name="zip_code" placeholder="Zip Code"></input>
+        <label for="occupation">Occupation:</label>
+          <input type="text" id="occupation" name="occupation"></input>
+        <label for="employer">Employer:</label>
+          <input type="text" id="employer" name="employer"></input>
+        <label for="employer_address">Employer Address:</label>
+          <input type="text" id="employer_address" name="employer_address_1"></input>
+          <input type="text" id="employer_address" name="employer_address_2"></input>
+    </fieldset>
+    <fieldset>
+      <legend>Loan Information</legend>
+        <label for="loan_type">Loan Type:</label>
+        <input list="type" name="loan_type"></input>
+        <datalist id="type" name="loan_type">
+          <option>Commercial</option>
+          <option>Real Estate</option>
+          <option>Personal</option>
+          <option>Mortgage</option>
+        </datalist>
+        <label for="loan_amount">Amount of Loan:</label>
+          <input type="text" id="loan_amount" name="loan_amount"></input>
+        <label for="loan_length">Length of Loan:</label>
+          <input type="radio" id="loan_length" name="loan_length" value="5_years">5 Years</input>
+          <input type="radio" id="loan_length" name="loan_length" value="15_years">15 Years</input>
+          <input type="radio" id="loan_length" name="loan_length" value="30_years">30 Years</input>
+        <label for="special_conditions">Special Conditions:</label>
+          <input type="checkbox" id="special_conditions" name="special_conditions" value="down_payment">I have a down payment</input>
+          <input type="checkbox" id="special_conditions" name="special_conditions" value="out_of_state">Out-of-state resident</input>
+          <input type="checkbox" id="special_conditions" name="special_conditions" value="married">Married</input>
+          <input type="checkbox" id="special_conditions" name="special_conditions" value="co-signed">Loan will be co-signed</input>
+    </fieldset>
+    <fieldset>
+      <legend>Additional Information</legend>
+        <label for="email">Email:</label>
+          <input type="email" id="email" name="user_email" placeholder="someone@somewhere.com"></input>
+        <label for="telephone">Phone:</label>
+          <input type="tel" id="telephone" name="user_telephone" placeholder="000-0000"></input>
+        <label for="linkedin">LinkedIn URL</label>
+          <input type="url" id="linkedin" name="linkedin"></input>
+        <label for="comment">Additional Comments:</label>
+          <textarea name="comment" id="comment"></textarea>
+    </fieldset>
+    <button type="submit">Submit</button>
+</body>
+</html>
