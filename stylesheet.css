@@ -1,3 +1,146 @@
 /*================================
  CSS STYLE SHEET BANK FORM
 ==================================*/
+
+/* HEADER STYLES */
+
+header h1 {
+  text-align: center;
+  font-weight: 200;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+/* BODY STYLES */
+
+.application {
+  width: 1000px;
+  height: 500px;
+  margin: auto;
+}
+
+/* APPLICATION INFORMATION STYLES */
+
+.app_info {
+  width: 960px;
+  height: 180px;
+}
+
+.app_info input {
+  margin: 2px;
+}
+
+/* APPLICATION INFORMATION LEFT COLUMN STYLES */
+
+.app_info_left label {
+  display: block;
+  margin: 5px 0 1px 0;
+}
+
+.app_info_left {
+  width: 555px;
+  height: 160px;
+  float: left;
+  border-right: 1px solid rgba(0,0,0,.5);
+}
+
+.app_address_input input {
+  width: 260px;
+}
+
+/* APPLICATION INFORMATION RIGHT COLUMN STYLES */
+
+.app_info_right {
+  width: 380px;
+  float: right;
+  text-align: top;
+}
+
+.app_info_right input {
+  margin: 2px;
+}
+
+.occupation,
+.employer {
+  width: 176px;
+  height: 55px;
+  display: inline-block;
+}
+
+.occupation label,
+.employer label,
+.employer_address label {
+  display: block;
+  margin: 5px 0 1px 0;
+}
+
+/* LOAN INFORMATION STYLES */
+.loan_info {
+  width: 960px;
+  height: 170px;
+}
+
+.loan_info label {
+  display: block;
+  margin: 10px 0 1px 0;
+}
+
+.loan_type,
+.loan_amount {
+  width: 230px;
+  display: inline-block;
+}
+
+.loan_type input,
+.loan_amount input{
+  width: 210px;
+  display: inline-block;
+}
+
+
+/* ADDITIONAL INFORMATION STYLES */
+
+.additional_info {
+  width: 960px;
+  height: 100px;
+}
+
+.contact {
+  width: 300px;
+  height: 100px;
+  display: inline-block;
+}
+
+.email,
+.telehone,
+.linkedin {
+  margin: 5px 0;
+}
+
+.email input,
+.telephone input {
+  width: 224px;
+}
+
+.comment {
+  display: inline-block;
+  width: 224px;
+  height: 70px;
+  margin: 0;
+}
+
+.comment label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.comment textarea {
+  resize: none;
+  width: 260px;
+  height: 45px;
+}
+
+.button {
+  text-align: center;
+  margin: 15px 20px;
+}

@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Banking Form</title>
-  <link rel="stylesheet" type="text/css" href="normalize.css">
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
@@ -12,45 +11,76 @@
 	<header>
 		<h1>Banking Form</h1>
 	</header>
-	<fieldset>
-      <legend>Applicant Information</legend>
-        <label for="name">Name:</label>
-          <input type="text" id="name" name="user_first_name" placeholder="First Name"></input>
-          <input type="text" id="name" name="user_middle_name" placeholder="Middle Name, if Applicable"></input>
-          <input type="text" id="name" name="user_last_name" placeholder="First Name"></input>
-        <label for="address">Address:</label>
-          <input type="text" id="address" name="address_line_1" placeholder="Address line 1"></input>
-          <input type="text" id="address" name="address_line_2" placeholder="Address line 2"></input>
-          <input type="text" id="city" name="city" placeholder="City"></input>
-        <label for="states">State:</label>
-          <input list="states" name="us_states"></input>
-          <datalist id="states" name="us_states">
-            <option>AL</option>
-            <option>AK</option>
-            <option>AR</option>
-            <option>AZ</option>
-          </datalist>
-        <input type="text" id="zip" name="zip_code" placeholder="Zip Code"></input>
-        <label for="occupation">Occupation:</label>
-          <input type="text" id="occupation" name="occupation"></input>
-        <label for="employer">Employer:</label>
-          <input type="text" id="employer" name="employer"></input>
-        <label for="employer_address">Employer Address:</label>
-          <input type="text" id="employer_address" name="employer_address_1"></input>
-          <input type="text" id="employer_address" name="employer_address_2"></input>
+  <article class="application">
+  	<fieldset class="app_info">
+        <!-- Applicant Information Fieldset -->
+        <legend>Applicant Information</legend>
+          <!-- Column 1, applicant personal info -->
+        <div class="app_info_left">
+          <label for="name">Name:</label>
+            <input type="text" id="name" name="user_first_name" placeholder="First Name"></input>
+            <input type="text" id="name" name="user_middle_name" placeholder="Middle Name, if Applicable"></input>
+            <input type="text" id="name" name="user_last_name" placeholder="First Name"></input>
+          <div class="app_address">
+            <div class="app_address_input">
+              <label for="address">Address:</label>
+                <input type="text" id="address" name="address_line_1" placeholder="Address line 1"></input>
+                <input type="text" id="address" name="address_line_2" placeholder="Address line 2"></input>
+                <input type="text" id="city" name="city" placeholder="City"></input>
+                <input list="states" name="us_states" placeholder="State"></input>
+                <datalist id="states" name="us_states">
+                  <option>AL</option>
+                  <option>AK</option>
+                  <option>AR</option>
+                  <option>AZ</option>
+                </datalist>
+              <input type="text" id="zip" name="zip_code" placeholder="Zip Code"></input>
+            </div>
+          </div>
+        </div>
+        <!-- Column 2, occupational info -->
+        <div class="app_info_right">
+          <div class="occupation">
+            <label for="occupation">Occupation:</label>
+              <input type="text" id="occupation" name="occupation"></input>
+          </div>
+          <div class="employer">
+            <label for="employer">Employer:</label>
+              <input type="text" id="employer" name="employer"></input>
+          </div>
+          <div class="employer_address">
+            <label for="address">Address:</label>
+              <input type="text" id="address" name="address_line_1" placeholder="Address line 1"></input>
+              <input type="text" id="address" name="address_line_2" placeholder="Address line 2"></input>
+              <input type="text" id="city" name="city" placeholder="City"></input>
+              <input list="states" name="us_states" placeholder="State"></input>
+              <datalist id="states" name="us_states">
+                <option>AL</option>
+                <option>AK</option>
+                <option>AR</option>
+                <option>AZ</option>
+              </datalist>
+            <input type="text" id="zip" name="zip_code" placeholder="Zip Code"></input>
+          </div>
+        </div>
     </fieldset>
-    <fieldset>
+    <fieldset class="loan_info">
+      <!-- Loan Information Fieldset -->
       <legend>Loan Information</legend>
-        <label for="loan_type">Loan Type:</label>
-        <input list="type" name="loan_type"></input>
-        <datalist id="type" name="loan_type">
-          <option>Commercial</option>
-          <option>Real Estate</option>
-          <option>Personal</option>
-          <option>Mortgage</option>
-        </datalist>
-        <label for="loan_amount">Amount of Loan:</label>
+        <div class="loan_type">
+          <label for="loan_type">Loan Type:</label>
+          <input list="type" name="loan_type"></input>
+          <datalist id="type" name="loan_type">
+            <option>Commercial</option>
+            <option>Real Estate</option>
+            <option>Personal</option>
+            <option>Mortgage</option>
+          </datalist>
+        </div>
+        <div class="loan_amount">
+          <label for="loan_amount">Amount of Loan:</label>
           <input type="text" id="loan_amount" name="loan_amount"></input>
+        </div>
         <label for="loan_length">Length of Loan:</label>
           <input type="radio" id="loan_length" name="loan_length" value="5_years">5 Years</input>
           <input type="radio" id="loan_length" name="loan_length" value="15_years">15 Years</input>
@@ -61,17 +91,33 @@
           <input type="checkbox" id="special_conditions" name="special_conditions" value="married">Married</input>
           <input type="checkbox" id="special_conditions" name="special_conditions" value="co-signed">Loan will be co-signed</input>
     </fieldset>
-    <fieldset>
+    <fieldset class="additional_info">
+      <!-- Additional Information Fieldset -->
       <legend>Additional Information</legend>
-        <label for="email">Email:</label>
-          <input type="email" id="email" name="user_email" placeholder="someone@somewhere.com"></input>
-        <label for="telephone">Phone:</label>
-          <input type="tel" id="telephone" name="user_telephone" placeholder="000-0000"></input>
-        <label for="linkedin">LinkedIn URL</label>
-          <input type="url" id="linkedin" name="linkedin"></input>
-        <label for="comment">Additional Comments:</label>
-          <textarea name="comment" id="comment"></textarea>
+        <!-- Column 1, short information -->
+        <div class="contact">
+          <div class="email">
+            <label for="email">Email:
+              <input type="email" id="email" name="user_email" placeholder="someone@somewhere.com"></input></label>
+          </div>
+          <div class="telephone">
+            <label for="telephone">Phone:
+              <input type="tel" id="telephone" name="user_telephone" placeholder="000-0000"></input></label>
+          </div>
+          <div class="linkedin">
+            <label for="linkedin">LinkedIn URL:
+              <input type="url" id="linkedin" name="linkedin"></input></label>
+          </div>
+        </div>
+          <!-- Column 2, Comments -->
+        <div class="comment">
+          <label for="comment">Additional Comments:</label>
+            <textarea name="comment" id="comment"></textarea>
+        </div>
     </fieldset>
+  </article>
+  <div class="button">
     <button type="submit">Submit</button>
+  </div>
 </body>
 </html>
